@@ -5,7 +5,6 @@ import {Icon} from '../Icon';
 interface IProps {
     children?: React.ReactNode;
     collapsed?: boolean;
-    headerStyles?: string;
 }
 interface IState {
     collapsed: boolean;
@@ -23,10 +22,7 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
     render() {
         const classes = classNames(
             'sd-editor-content__authoring-header',
-            {
-                'authoring-header--collapsed': this.state.collapsed,
-                [`${this.props.headerStyles}`]: this.props.headerStyles,
-            },
+            {'authoring-header--collapsed': this.state.collapsed},
         );
 
         return (
