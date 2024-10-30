@@ -247,25 +247,6 @@
             overflow: hidden;
             transition: opacity 0.4s 0.1s;
         }
-
-        &.authoring-header--padding-small,
-        &.authoring-header--padding-medium,
-        &.authoring-header--padding-large {
-            padding-block-start: 0 !important;
-            padding-block-end: 0 !important;
-        }
-    }
-
-    &.authoring-header--padding-small {
-        padding: $sd-base-increment * 3 $sd-base-increment * 1.5;
-    }
-
-    &.authoring-header--padding-medium {
-        padding: $sd-base-increment * 3 $sd-base-increment * 3;
-    }
-
-    &.authoring-header--padding-large {
-        padding: $sd-base-increment * 3 $sd-base-increment * 4;
     }
 }
 
