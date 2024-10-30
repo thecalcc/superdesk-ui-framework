@@ -175,6 +175,7 @@ export class RundownEditor extends React.Component<IProps, IState> {
 
                 <Layout.MainPanel padding='none'>
                     <Layout.AuthoringMain
+                        headerStyles='authoring-header--padding-medium'
                         toolBar={(
                             <React.Fragment>
                                 <div className="sd-editor-toolbar__content">
@@ -340,6 +341,7 @@ export class RundownEditor extends React.Component<IProps, IState> {
                             <Layout.AuthoringFrame
                                 main={
                                     <Layout.AuthoringMain
+                                        headerStyles='authoring-header--padding-medium'
                                         toolbarCustom={true}
                                         headerCollapsed={true}
                                         toolBar={(
