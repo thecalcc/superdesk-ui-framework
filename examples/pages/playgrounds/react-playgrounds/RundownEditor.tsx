@@ -147,7 +147,7 @@ export class RundownEditor extends React.Component<IProps, IState> {
                 <Layout.HeaderPanel>
                     <SubNav>
                         <Tooltip text={this.state.isExpanded ? "Revert Authoring" : "Expand Authoring"} flow='right' appendToBody={true}>
-                            <button
+                            <button 
                                 className={`expand-button ${this.state.isExpanded ? "expand-button--expanded" : ""}`}
                                 onClick={this.toggleExpand}
                             >
@@ -175,7 +175,7 @@ export class RundownEditor extends React.Component<IProps, IState> {
 
                 <Layout.MainPanel padding='none'>
                     <Layout.AuthoringMain
-                        headerStyles='authoring-header--padding-medium'
+                        headerPadding='medium'
                         toolBar={(
                             <React.Fragment>
                                 <div className="sd-editor-toolbar__content">
@@ -341,7 +341,7 @@ export class RundownEditor extends React.Component<IProps, IState> {
                             <Layout.AuthoringFrame
                                 main={
                                     <Layout.AuthoringMain
-                                        headerStyles='authoring-header--padding-medium'
+                                        headerPadding='medium'
                                         toolbarCustom={true}
                                         headerCollapsed={true}
                                         toolBar={(

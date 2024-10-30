@@ -134,7 +134,7 @@ export class Editor extends React.Component<{}, IEditor> {
                 )}
                 main={(
                     <Layout.AuthoringMain
-                        headerStyles='authoring-header--padding-medium'
+                        headerPadding='medium'
                         toolBar={(
                             <React.Fragment>
                                 <div className="sd-editor-toolbar__content">
