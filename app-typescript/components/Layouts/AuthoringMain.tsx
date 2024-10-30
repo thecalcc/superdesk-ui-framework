@@ -16,7 +16,7 @@ interface IProps {
     authoringHeader?: React.ReactNode;
     authoringBookmarks?: React.ReactNode;
     headerCollapsed?: boolean;
-    headerPadding?: 'small' | 'medium' | 'large';
+    headerPadding?: React.CSSProperties['padding'];
     toolbarCustom?: boolean;
     noPaddingForContent?: boolean;
 }
@@ -33,10 +33,10 @@ export class AuthoringMain extends React.PureComponent<IProps> {
                 <AuthoringMainContent>
                     {this.props.authoringHeader && (
                         <AuthoringInnerHeader
-                        headerPadding={this.props.headerPadding}
-                        collapsed={this.props.headerCollapsed}>
+                            headerPadding={this.props.headerPadding}
+                            collapsed={this.props.headerCollapsed}>
                             {this.props.authoringHeader}
-                    </AuthoringInnerHeader>
+                        </AuthoringInnerHeader>
                     )}
                     {this.props.authoringBookmarks && (
                         <AuthorinInnerSideBar>
