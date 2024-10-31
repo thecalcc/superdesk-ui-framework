@@ -7,8 +7,14 @@ import {
     AuthoringInnerHeader,
     AuthoringInnerBody,
     AuthorinInnerSideBar,
-
 } from './';
+
+export type HeaderPadding = {
+    inlineStart?: React.CSSProperties['padding'];
+    inlineEnd?: React.CSSProperties['padding'];
+    top?: React.CSSProperties['padding'];
+    bottom?: React.CSSProperties['padding'];
+};
 
 interface IProps {
     toolBar?: React.ReactNode;
@@ -16,7 +22,7 @@ interface IProps {
     authoringHeader?: React.ReactNode;
     authoringBookmarks?: React.ReactNode;
     headerCollapsed?: boolean;
-    headerPadding?: React.CSSProperties['padding'];
+    headerPadding?: HeaderPadding;
     toolbarCustom?: boolean;
     noPaddingForContent?: boolean;
 }

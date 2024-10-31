@@ -1,12 +1,14 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import {Icon} from '../Icon';
+import {HeaderPadding} from './AuthoringMain';
 
 interface IProps {
     children?: React.ReactNode;
     collapsed?: boolean;
-    headerPadding?: React.CSSProperties['padding'];
+    headerPadding?: HeaderPadding;
 }
+
 interface IState {
     collapsed: boolean;
 }
@@ -28,7 +30,12 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
 
         return (
             <header
-                style={{padding: headerPadding}}
+                style={{
+                    paddingTop: headerPadding?.top,
+                    paddingBottom: headerPadding?.bottom,
+                    paddingInlineStart: headerPadding?.inlineStart,
+                    paddingInlineEnd: headerPadding?.inlineEnd,
+                }}
                 className={classes}
             >
                 <div className="authoring-header__holder">
