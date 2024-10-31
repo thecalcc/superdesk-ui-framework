@@ -122,6 +122,9 @@ export class EditorTest extends React.Component<IProps, IState> {
                 )}
                 main={(
                     <Layout.AuthoringMain
+                        headerPadding={{
+                            top: 10,
+                        }}
                         toolBar={(
                             <React.Fragment>
                                 <div className="sd-editor-toolbar__content">
