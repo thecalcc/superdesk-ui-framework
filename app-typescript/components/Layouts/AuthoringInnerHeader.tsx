@@ -31,8 +31,8 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
         return (
             <header
                 style={{
-                    paddingTop: headerPadding?.top,
-                    paddingBottom: headerPadding?.bottom,
+                    paddingBlockStart: headerPadding?.top,
+                    paddingBlockEnd: headerPadding?.bottom,
                     paddingInlineStart: headerPadding?.inlineStart,
                     paddingInlineEnd: headerPadding?.inlineEnd,
                 }}
