@@ -233,7 +233,7 @@
 
     &.authoring-header--collapsed {
         max-height: 0;
-        padding: 0 $sd-base-increment * 1.5;
+        padding: 0 $sd-base-increment * 1.5 !important;
 
         .authoring-header__toggle {
             i {
