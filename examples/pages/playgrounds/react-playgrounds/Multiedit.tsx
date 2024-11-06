@@ -84,7 +84,6 @@ export class Multiedit extends React.Component<IProps, IState> {
                     }}
                 >
                     <Dropdown
-                        append
                         items={[
                             { label: 'Action 1', onSelect: () => this.setState({arr: [...this.state.arr, <Editor />]}) },
                         ]}
@@ -116,7 +115,7 @@ export class Editor extends React.Component<{}, IEditor> {
         <div style={{borderRight: '4px solid grey'}}>
             <Layout.AuthoringFrame
                 header={(
-                    <SubNav zIndex={2}>
+                    <SubNav>
                         <ButtonGroup align='end'>
                             <ButtonGroup subgroup={true} spaces="no-space">
                                 <Tooltip text='More actions' flow='left'>

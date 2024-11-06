@@ -176,7 +176,7 @@ export class Rundowns extends React.Component<IProps, IState> {
 
                     <Layout.LayoutContainer>
                         <Layout.HeaderPanel>
-                            <SubNav zIndex={2}>
+                            <SubNav>
                                 <SearchBar placeholder='Search media'></SearchBar>
                                 <ButtonGroup align='end' spaces='no-space'>
                                     <Dropdown
@@ -227,7 +227,7 @@ export class Rundowns extends React.Component<IProps, IState> {
                                     </Dropdown>
                                 </ButtonGroup>
                             </SubNav>
-                            <SubNav zIndex={1}>
+                            <SubNav>
                                 <ButtonGroup align='start'>
                                     <NavButton icon='filter-large' onClick={this.handleFilter} />
                                 </ButtonGroup>
@@ -503,7 +503,6 @@ export class Rundowns extends React.Component<IProps, IState> {
                                         <Container className='sd-margin-s--auto sd-flex--items-center'>
                                             {/* <Dropdown
                                                 align = 'right'
-                                                append = {true}
                                                 items={[
                                                     {
                                                         type: 'group', label: 'Actions', items: [
@@ -588,7 +587,6 @@ export class Rundowns extends React.Component<IProps, IState> {
                 <Modal
                     headerTemplate="Manage Templates"
                     visible={this.state.modalManageTemplate}
-                    zIndex={1000}
                     contentBg='medium'
                     contentPadding='none'
                     size='x-large' onHide={() => {this.setState({modalManageTemplate: false})}}
@@ -691,7 +689,6 @@ export class Rundowns extends React.Component<IProps, IState> {
                 <Modal
                     headerTemplate="Create new Show"
                     visible={this.state.modalNewShow}
-                    zIndex={1000}
                     footerTemplate={newShowFooter}
                     contentBg='medium'
                     size='medium' onHide={() => {this.setState({modalNewShow: false})}}
@@ -723,7 +720,6 @@ export class Rundowns extends React.Component<IProps, IState> {
                 <Modal
                     headerTemplate="Create new Show"
                     visible={this.state.modalNewShowSuccess}
-                    zIndex={1000}
                     footerTemplate={newShowFooter2}
                     contentBg='medium'
                     size='medium' onHide={() => {this.setState({modalNewShowSuccess: false})}}
@@ -740,7 +736,6 @@ export class Rundowns extends React.Component<IProps, IState> {
                 {/* New Template Modal */}
                 <Modal headerTemplate="Create new Template"
                     visible={this.state.modalNewTemplate}
-                    zIndex={1000}
                     contentBg='medium'
                     contentPadding='none'
                     size='x-large' onHide={() => {this.setState({modalNewTemplate: false})}}
@@ -866,14 +861,13 @@ export class Rundowns extends React.Component<IProps, IState> {
                     headerTemplate="Manage Shows"
                     maximizable
                     visible={this.state.modalManageShow}
-                    zIndex={1000}
                     contentBg='medium'
                     contentPadding='none'
                     size='x-large' onHide={() => {this.setState({modalManageShow: false})}}
                 >
                     <Layout.LayoutContainer>
                         <Layout.HeaderPanel>
-                            <SubNav zIndex={2}>
+                            <SubNav>
                                 <SearchBar placeholder='Search shows'></SearchBar>
                                 <ButtonGroup align='end' spaces='no-space'>
                                     <CreateButton ariaValue='New show' onClick={() => false} />
@@ -962,7 +956,6 @@ export class Rundowns extends React.Component<IProps, IState> {
                                         <Container className='sd-margin-s--auto sd-flex--items-center'>
                                             <Dropdown
                                                 align = 'right'
-                                                append = {true}
                                                 items={[
                                                     {
                                                         type: 'group', label: 'Actions', items: [

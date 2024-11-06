@@ -56,7 +56,7 @@ export class PageLayoutTest extends React.Component<IProps, IState> {
         return (
             <Layout.PageLayout
             header={(
-                <SubNav zIndex={2}>
+                <SubNav>
                     <ButtonGroup align="start" padded={true}>
                         <Button
                             text="Open left panel"

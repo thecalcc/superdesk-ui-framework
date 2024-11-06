@@ -29,7 +29,9 @@ interface IState<T> {
 }
 
 const labelKey = 'label';
-
+/**
+ * @deprecated use MultiSelect or TreeSelect
+ */
 export class SelectWithTemplate<T> extends React.Component<IProps<T>, IState<T>> {
     componentRef: Dropdown | null;
     private htmlId = nextId();

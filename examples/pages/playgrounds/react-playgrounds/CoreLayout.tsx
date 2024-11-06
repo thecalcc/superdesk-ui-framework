@@ -296,7 +296,7 @@ export class CoreLayout extends React.Component<IProps, IState> {
                 {!this.state.fullEditor && !this.state.rightPanel
                     && <Layout.LayoutContainer>
                         <Layout.HeaderPanel>
-                            <SubNav zIndex={2}>
+                            <SubNav>
                                 <SearchBar placeholder='Search media'></SearchBar>
                                 <ButtonGroup align='end' spaces='no-space'>
                                     <Dropdown
@@ -346,7 +346,7 @@ export class CoreLayout extends React.Component<IProps, IState> {
                                     </Dropdown>
                                 </ButtonGroup>
                             </SubNav>
-                            <SubNav zIndex={1}>
+                            <SubNav>
                                 <ButtonGroup align='start'>
                                     <NavButton icon='filter-large' onClick={this.handleFilter} />
                                 </ButtonGroup>
@@ -585,7 +585,6 @@ export class CoreLayout extends React.Component<IProps, IState> {
                                         <Layout.Container className='sd-margin-s--auto sd-flex--items-center'>
                                             {/* <Dropdown
                                                 align = 'right'
-                                                append = {true}
                                                 items={[
                                                     {
                                                         type: 'group', label: 'Actions', items: [

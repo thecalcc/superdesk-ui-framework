@@ -123,7 +123,7 @@ export class PersonalProfile extends React.Component<IProps, IState> {
             <Components.Layout header='My Profile' theme={this.state.theme}>
                 <Components.LayoutContainer>
                     <Components.HeaderPanel>
-                        <SubNav zIndex={2}>
+                        <SubNav>
                             <ButtonGroup align='start' spaces='no-space'>
                                 <Tooltip text='User list' flow='right'>
                                     <NavButton icon='arrow-left' onClick={() => false} />
@@ -135,7 +135,7 @@ export class PersonalProfile extends React.Component<IProps, IState> {
                             </AvatarWrapper>
                             <h2 className='subnav__page-title'>Jeffrey Lebowski</h2>
                         </SubNav>
-                        <SubNav zIndex={1}>
+                        <SubNav>
                             <SubNavDivider width='small' />
                             <Tabs onClick={this.handleClick}>
                                 <TabLabel label='Overview' indexValue={0}/>

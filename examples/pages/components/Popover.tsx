@@ -35,7 +35,6 @@ export class PopoverDoc extends React.Component {
                                     triggerSelector="#button-view-content"
                                     title="Popover test"
                                     placement="top-end"
-                                    zIndex={999}
                                 >
                                     Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.
                                 </Popover>
@@ -49,7 +48,6 @@ export class PopoverDoc extends React.Component {
                             triggerSelector="#button-view-content"
                             title="Popover test"
                             placement="top-end"
-                            zIndex={999}
                         >
                             Donec sed odio dui. Aenean lacinia bibendum nulla sed consectetur.
                         </Popover>
@@ -65,7 +63,6 @@ export class PopoverDoc extends React.Component {
                     <Prop name='placement' isRequired={false}
                           type='auto | auto-end | auto-start | bottom | bottom-end | bottom-start | left | left-end | left-start | right | right-end | right-start | top | top-end | top-start' 
                           default='auto' description='Define the placement of the Popover.' />
-                    <Prop name='zIndex' isRequired={false} type='number' default='null' description='Defines the z-index of the Popover.' />
                 </PropsList>
             </section>
         )

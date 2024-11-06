@@ -77,7 +77,7 @@ class ThreePaneLayoutPattern extends React.Component<IProps, IState> {
                         <div style={{height: 600,}} className='sd-border--light'>
                             <Layout.PageLayout fullHeight={true}
                                 header={(
-                                    <SubNav zIndex={2}>
+                                    <SubNav>
                                         <ButtonGroup align="inline">
                                             <Tooltip text='Click to toggle left panel' flow='right'>
                                                 <NavButton 
@@ -212,7 +212,7 @@ class ThreePaneLayoutPattern extends React.Component<IProps, IState> {
                     <Markup.ReactMarkupCode>{`
                         <Layout.PageLayout
                             header={(
-                                <SubNav zIndex={2}>
+                                <SubNav>
                                     <ButtonGroup align="inline">
                                         <Tooltip text='Click to toggle left panel' flow='right'>
                                             <NavButton 

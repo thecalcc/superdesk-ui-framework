@@ -1008,7 +1008,6 @@ export class TestGround extends React.Component<IProps, IState> {
                          {/* Event Only (This one existed Before) */}
                         <Modal 
                             headerTemplate="Save Event"
-                            zIndex={10000}
                             visible={this.state.modalSaveEvent}
                             contentPadding='medium'
                             contentBg='medium'
@@ -1059,7 +1058,6 @@ export class TestGround extends React.Component<IProps, IState> {
                         {/* Event and Planning */}
                         <Modal 
                             headerTemplate="Save Event"
-                            zIndex={10000}
                             visible={this.state.modalSaveEvent2}
                             contentPadding='medium'
                             contentBg='medium'
@@ -1158,7 +1156,6 @@ export class TestGround extends React.Component<IProps, IState> {
                         {/* Planning only */}
                         <Modal 
                             headerTemplate="Save Event"
-                            zIndex={10000}
                             visible={this.state.modalSaveEvent3}
                             contentPadding='medium'
                             contentBg='medium'
@@ -1266,7 +1263,6 @@ export class TestGround extends React.Component<IProps, IState> {
 
                         {/* Planning templates modal */}
                         <Modal headerTemplate="Planning templates"
-                            zIndex={10000}
                             visible={this.state.modalPlanningTemplates}
                             contentPadding='medium'
                             contentBg='medium'

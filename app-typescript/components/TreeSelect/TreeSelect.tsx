@@ -14,6 +14,7 @@ import {getPrefixedItemId, TreeSelectItem} from './TreeSelectItem';
 import {keyboardNavigation} from './KeyboardNavigation';
 import {WithPortal} from '../WithPortal';
 import { DragDropContext, Droppable, Draggable, DropResult } from "react-beautiful-dnd";
+import {getNextZIndex} from '../../zIndex';
 
 const reorder = (list: Array<any>, startIndex: number, endIndex: number) => {
     const result = Array.from(list);
@@ -53,7 +54,6 @@ interface IPropsBase<T> extends IInputWrapper {
     searchPlaceholder?: string;
     noResultsFoundMessage?: string;
     dropdownInitiallyOpen?: boolean;
-    zIndex?: number;
     sortable?: boolean;
     'data-test-id'?: string;
     getLabel(item: T): string;
@@ -94,6 +94,7 @@ export class TreeSelect<T> extends React.Component<IProps<T>, IState<T>> {
     private treeSelectRef: React.RefObject<HTMLDivElement>;
     private htmlId: string = nextId();
     private popperInstance: Instance | null;
+    private zIndex: number = getNextZIndex();
 
     constructor(props: IProps<T>) {
         super(props);
@@ -887,7 +888,7 @@ export class TreeSelect<T> extends React.Component<IProps<T>, IState<T>> {
                             + (this.props.width === 'medium' ? ' autocomplete--fixed-width' : '')
                         }
                         style={{
-                            zIndex: this.props.zIndex,
+                            zIndex: this.zIndex,
                             width: this.treeSelectRef.current?.offsetWidth,
                         }}
                         ref={this.dropdownRef}

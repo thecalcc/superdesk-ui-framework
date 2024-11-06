@@ -83,7 +83,7 @@ export class SamsPlayground extends React.Component<IProps, IState> {
 
                 <Components.LayoutContainer>
                     <Components.HeaderPanel>
-                        <SubNav zIndex={2}>
+                        <SubNav>
                             <ButtonGroup align='inline'>
                                 <Dropdown
                                     items={[
@@ -107,7 +107,7 @@ export class SamsPlayground extends React.Component<IProps, IState> {
                                 <NavButton icon='dots-vertical' onClick={() => false} />
                             </ButtonGroup>
                         </SubNav>
-                        <SubNav zIndex={1}>
+                        <SubNav>
                             <ButtonGroup align='inline'>
                                 <NavButton icon='filter-large' onClick={this.handleFilter} />
                             </ButtonGroup>
@@ -270,7 +270,6 @@ export class SamsPlayground extends React.Component<IProps, IState> {
                                     <div className="side-panel__content-block-inner side-panel__content-block-inner--right">
                                         <Dropdown
                                             align = 'right'
-                                            append = {true}
                                             items={[
                                                 {
                                                     type: 'group', label: 'Actions', items: [

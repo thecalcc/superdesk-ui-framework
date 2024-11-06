@@ -100,6 +100,7 @@ export { ContentListItem } from './components/Lists/ContentList';
 export { MultiSelect } from './components/MultiSelect';
 export { ResizablePanels } from './components/ResizablePanels';
 export { WithPopover } from './components/WithPopover';
+export { PopupPositioner, showPopup } from './components/ShowPopup';
 export { Spacer, SpacerBlock } from '@superdesk/common';
 export { ResizeObserverComponent } from './components/ResizeObserverComponent';
 export { DragHandleDots } from './components/DragHandleDots';

@@ -71,7 +71,6 @@ export class MultiselectDocs extends React.Component<{}, IState> {
                                     placeholder='Select a color'
                                     filter
                                     showSelectAll
-                                    zIndex={2000}
                                     onChange={(e: any) => this.setState({value: e})}
                                 />
                             </div>
@@ -88,7 +87,6 @@ export class MultiselectDocs extends React.Component<{}, IState> {
                             placeholder='Select a color'
                             filter
                             showSelectAll
-                            zIndex={2000}
                             onChange={(e: any) => this.setState({value: e})}
                         />
                     `}</Markup.ReactMarkupCode>

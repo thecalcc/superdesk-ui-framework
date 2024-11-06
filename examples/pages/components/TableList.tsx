@@ -23,7 +23,7 @@ export default class TableListDoc extends React.Component<IProps, IState> {
                     </>,
                     center: <span>Item 1</span>,
                     end: <IconLabel style='translucent' text='Label success' type='success' icon='time' />,
-                    action: <Dropdown append={true} items={[
+                    action: <Dropdown items={[
                         { label: <Label style='translucent' type='primary' text='aacc' />, onSelect: () => 1 },
                         { label: <Label style='translucent' text='prlg' />, onSelect: () => 1 },
                         { label: <Label style='translucent' type='primary' text='prlg' />, onSelect: () => 1 },

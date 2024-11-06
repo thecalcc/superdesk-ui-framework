@@ -5,6 +5,7 @@ import {getPrefixedItemId, TreeSelectItem} from './TreeSelect/TreeSelectItem';
 import {keyboardNavigation} from './TreeSelect/KeyboardNavigation';
 import {WithPortal} from './WithPortal';
 import {nameof} from '../helpers';
+import {getNextZIndex} from '../zIndex';
 
 interface IState<T> {
     options: Array<ITreeMenuNode<T>>;
@@ -21,7 +22,6 @@ interface IState<T> {
 }
 
 interface IProps<T> {
-    zIndex?: number;
     searchPlaceholder?: string;
     singleLevelSearch?: boolean;
     'data-test-id'?: string;
@@ -78,6 +78,7 @@ export class TreeMenu<T> extends React.Component<IProps<T>, IState<T>> {
     private treeMenuRef: React.RefObject<HTMLDivElement>;
     private inputRef: React.RefObject<HTMLInputElement>;
     private popperInstance: Instance | null;
+    private zIndex: number = getNextZIndex();
 
     constructor(props: IProps<T>) {
         super(props);
@@ -357,7 +358,7 @@ export class TreeMenu<T> extends React.Component<IProps<T>, IState<T>> {
                         ref={this.dropdownRef}
                         className="autocomplete autocomplete--multi-select autocomplete--fixed-width"
                         style={{
-                            zIndex: this.props.zIndex,
+                            zIndex: this.zIndex,
                         }}
                     >
                         <div className='autocomplete__header'>
