@@ -40,8 +40,7 @@ class TooltipBasic extends React.PureComponent<IProps> {
 }
 
 const TooltipAppended: React.FC<IProps> = ({children, flow, text}) => {
-    const htmlId = nextId();
-    const triggerId = "t" + htmlId;
+    const triggerId = `uif-tooltip-${Math.random().toString().slice(2)}`;
     const position = flow === "down" ? "bottom" : flow;
 
     return (
