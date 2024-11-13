@@ -7,6 +7,7 @@ interface IProps {
     children?: React.ReactNode;
     collapsed?: boolean;
     headerPadding?: HeaderPadding;
+    hideCollapseButton?: boolean;
 }
 
 interface IState {
@@ -23,6 +24,8 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
     }
 
     render() {
+        const hideCollapseButton = this.props.hideCollapseButton ?? false;
+
         const classes = classNames('sd-editor-content__authoring-header', {
             'authoring-header--collapsed': this.state.collapsed,
         });
@@ -41,10 +44,12 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
                 <div className="authoring-header__holder">
                     {this.props.children}
                 </div>
-                <button className="authoring-header__toggle"
-                    onClick={() => this.setState({collapsed: !this.state.collapsed})}>
-                    <Icon name="chevron-up-thin" />
-                </button>
+                {!hideCollapseButton && (
+                    <button className="authoring-header__toggle"
+                        onClick={() => this.setState({collapsed: !this.state.collapsed})}>
+                        <Icon name="chevron-up-thin" />
+                    </button>
+                )}
             </header>
         );
     }
