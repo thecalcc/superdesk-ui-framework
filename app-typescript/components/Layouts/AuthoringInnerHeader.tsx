@@ -24,7 +24,7 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
     }
 
     render() {
-        const hideCollapseBtn = this.props.hideCollapseButton ?? false;
+        const hideCollapseButton = this.props.hideCollapseButton ?? false;
 
         const classes = classNames('sd-editor-content__authoring-header', {
             'authoring-header--collapsed': this.state.collapsed,
@@ -44,7 +44,7 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
                 <div className="authoring-header__holder">
                     {this.props.children}
                 </div>
-                {!hideCollapseBtn && (
+                {!hideCollapseButton && (
                     <button className="authoring-header__toggle"
                         onClick={() => this.setState({collapsed: !this.state.collapsed})}>
                         <Icon name="chevron-up-thin" />
