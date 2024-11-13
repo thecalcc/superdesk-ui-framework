@@ -22,6 +22,7 @@ interface IProps {
     authoringHeader?: React.ReactNode;
     authoringBookmarks?: React.ReactNode;
     headerCollapsed?: boolean;
+    hideCollapseButton?: boolean;
     headerPadding?: HeaderPadding;
     toolbarCustom?: boolean;
     noPaddingForContent?: boolean;
@@ -39,6 +40,7 @@ export class AuthoringMain extends React.PureComponent<IProps> {
                 <AuthoringMainContent>
                     {this.props.authoringHeader && (
                         <AuthoringInnerHeader
+                            hideCollapseButton={this.props.hideCollapseButton}
                             headerPadding={this.props.headerPadding}
                             collapsed={this.props.headerCollapsed}>
                             {this.props.authoringHeader}
