@@ -22,7 +22,7 @@ const MIN_WIDTH = 348;
 
 export class DateTimePicker extends React.PureComponent<IProps> {
     handleTimeChange = (time: string) => {
-        const [hours, minutes] = time.split(':').map((x) => defaultTo(parseInt(x), 0)); // handle NaN value
+        const [hours, minutes] = time.split(':').map((x) => defaultTo(parseInt(x, 10), 0)); // handle NaN value
         const origDate = this.props.value ?? new Date();
 
         origDate.setHours(hours);
@@ -48,7 +48,7 @@ export class DateTimePicker extends React.PureComponent<IProps> {
     }
 
     prepareFormat(unitOfTime: number) {
-        return padStart((unitOfTime).toString(), 2, '0')
+        return padStart((unitOfTime).toString(), 2, '0');
     }
 
     render() {
