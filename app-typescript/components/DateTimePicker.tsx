@@ -63,7 +63,7 @@ export class DateTimePicker extends React.PureComponent<IProps> {
                     <DatePicker
                         disabled={this.props.disabled}
                         preview={this.props.preview}
-                        hideClear={true}
+                        hideClearButton={true}
                         value={convertedValue}
                         onChange={(val) => {
                             this.handleDateChange(val?.toString());

@@ -33,7 +33,7 @@ interface IDatePickerBase extends IInputWrapper {
         }}
      */
     locale?: DatePickerLocaleSettings;
-    hideClear?: boolean;
+    hideClearButton?: boolean;
 }
 
 interface IDatePicker extends IDatePickerBase {
@@ -162,7 +162,7 @@ export class DatePicker extends React.PureComponent<IDatePicker, IState> {
             >
                 <Calendar
                     className='sd-input__input'
-                    footerTemplate={this.props.hideClear !== true ? () => (
+                    footerTemplate={this.props.hideClearButton !== true ? () => (
                         <div className='d-flex justify-end'>
                             <Button
                                 onClick={() => {
