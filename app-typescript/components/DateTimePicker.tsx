@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {DatePicker} from '../components/DatePicker';
 import {Spacer} from '@superdesk/common';
-import {defaultTo, padStart} from 'lodash';
+import {defaultTo} from 'lodash';
 import {TimePicker} from './TimePicker';
 import {IconButton} from './IconButton';
 
@@ -9,7 +9,7 @@ interface IProps {
     value: Date | null;
     label: string;
     dateFormat: string;
-    onChange: (value?: string) => void;
+    onChange: (value: string | null) => void;
     preview?: boolean;
     fullWidth?: boolean;
     allowSeconds?: boolean;
@@ -33,7 +33,7 @@ export class DateTimePicker extends React.PureComponent<IProps> {
 
     handleDateChange = (date?: string) => {
         if (date == null) {
-            this.props.onChange();
+            this.props.onChange(null);
 
             return;
         }
@@ -48,7 +48,7 @@ export class DateTimePicker extends React.PureComponent<IProps> {
     }
 
     prepareFormat(unitOfTime: number) {
-        return padStart((unitOfTime).toString(), 2, '0');
+        return unitOfTime.toString().padStart(2, '0');
     }
 
     render() {
@@ -89,7 +89,7 @@ export class DateTimePicker extends React.PureComponent<IProps> {
                             disabled={this.props.disabled}
                             icon='close-small'
                             onClick={() => {
-                                this.props.onChange();
+                                this.props.onChange(null);
                             }}
                             ariaValue='Clear'
                         />
