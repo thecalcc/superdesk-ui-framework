@@ -24,6 +24,7 @@ export { Tooltip } from './components/Tooltip';
 export { DurationInput } from './components/DurationInput';
 export { getDurationString } from './components/DurationInput';
 export { DatePicker } from './components/DatePicker';
+export { DateTimePicker } from './components/DateTimePicker';
 export { DatePickerISO } from './components/DatePicker';
 export { DatePickerLocaleSettings } from './components/DatePicker';
 export { TimePicker } from './components/TimePicker';

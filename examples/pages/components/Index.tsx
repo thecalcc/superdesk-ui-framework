@@ -21,6 +21,7 @@ import IconButtonDoc from './IconButtons';
 import IconLabelDoc from './IconLabels';
 import TooltipDoc from './Tooltips';
 import DatePickerDoc from './DatePicker';
+import DateTimePickerDoc from './DateTimePicker';
 import TimePickerDoc from './TimePicker';
 import SwitchDoc from './Switch';
 import RadioGroupDoc from './RadioGroup';
@@ -336,6 +337,10 @@ const pages: IPages = {
             'date-picker': {
                 name: 'Date Picker',
                 component: DatePickerDoc,
+            },
+            'date-time-picker': {
+                name: 'DateTime Picker',
+                component: DateTimePickerDoc,
             },
             'time-picker': {
                 name: 'Time Picker',
