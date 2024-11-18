@@ -34,7 +34,6 @@ interface IDatePickerBase extends IInputWrapper {
      */
     locale?: DatePickerLocaleSettings;
 
-    // Hide does not mean show
     hideClearButton?: boolean;
 }
 
