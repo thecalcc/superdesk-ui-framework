@@ -63,6 +63,7 @@ export class DateTimePicker extends React.PureComponent<IProps> {
                     <DatePicker
                         disabled={this.props.disabled}
                         preview={this.props.preview}
+                        required={this.props.required}
                         hideClearButton={true}
                         value={convertedValue}
                         onChange={(val) => {
@@ -71,7 +72,6 @@ export class DateTimePicker extends React.PureComponent<IProps> {
                         dateFormat={this.props.dateFormat}
                         label={this.props.label}
                         fullWidth={this.props.fullWidth}
-                        required={this.props.required}
                     />
                     <TimePicker
                         disabled={this.props.disabled}

@@ -33,6 +33,8 @@ interface IDatePickerBase extends IInputWrapper {
         }}
      */
     locale?: DatePickerLocaleSettings;
+
+    // Hide does not mean show
     hideClearButton?: boolean;
 }
 
@@ -147,6 +149,10 @@ export class DatePicker extends React.PureComponent<IDatePicker, IState> {
             );
         }
 
+        const showClearButton = this.props.required === true
+            ? false
+            : this.props.hideClearButton !== true;
+
         return (
             <InputWrapper
                 label={this.props.label}
@@ -162,7 +168,7 @@ export class DatePicker extends React.PureComponent<IDatePicker, IState> {
             >
                 <Calendar
                     className='sd-input__input'
-                    footerTemplate={this.props.hideClearButton !== true ? () => (
+                    footerTemplate={showClearButton ? () => (
                         <div className='d-flex justify-end'>
                             <Button
                                 onClick={() => {
