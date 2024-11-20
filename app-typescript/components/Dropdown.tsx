@@ -84,6 +84,7 @@ export const Dropdown = ({
             el.style.left = '0';
             el.style.width = '1px';
             el.style.height = '1px';
+            el.setAttribute('data-test-id', 'dropdown-overlay');
 
             document.body.appendChild(el);
         }
