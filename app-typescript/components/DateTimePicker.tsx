@@ -70,7 +70,8 @@ export class DateTimePicker extends React.PureComponent<IProps> {
                             this.handleDateChange(val?.toString());
                         }}
                         dateFormat={this.props.dateFormat}
-                        label={this.props.label}
+                        inlineLabel
+                        labelHidden
                         fullWidth={this.props.fullWidth}
                     />
                     <TimePicker
