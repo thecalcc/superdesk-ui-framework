@@ -7,7 +7,10 @@ import {IconButton} from './IconButton';
 
 interface IProps {
     value: Date | null;
-    label: string;
+    label: {
+        text: string;
+        hidden?: boolean;
+    };
     dateFormat: string;
     onChange: (value: string | null) => void;
     preview?: boolean;
@@ -70,7 +73,9 @@ export class DateTimePicker extends React.PureComponent<IProps> {
                             this.handleDateChange(val?.toString());
                         }}
                         dateFormat={this.props.dateFormat}
-                        label={this.props.label}
+                        label={this.props.label.text}
+                        inlineLabel={this.props.label.hidden ?? false}
+                        labelHidden={this.props.label.hidden ?? false}
                         fullWidth={this.props.fullWidth}
                     />
                     <TimePicker
