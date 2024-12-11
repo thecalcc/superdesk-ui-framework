@@ -85,6 +85,8 @@ export class DateTimePicker extends React.PureComponent<IProps> {
                         onChange={(val) => {
                             this.handleTimeChange(val);
                         }}
+                        inlineLabel
+                        labelHidden
                         allowSeconds={this.props.allowSeconds}
                         fullWidth={this.props.fullWidth}
                         required={this.props.required}
