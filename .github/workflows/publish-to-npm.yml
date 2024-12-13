@@ -13,8 +13,8 @@ jobs:
             - uses: actions/setup-node@v3
               with:
                   node-version: '14'
-            - run: npm lint
-            - run: npm build
+            - run: npm run lint
+            - run: npm run build
             - uses: JS-DevTools/npm-publish@v3
               with:
                   token: ${{ secrets.NPM_TOKEN }}
