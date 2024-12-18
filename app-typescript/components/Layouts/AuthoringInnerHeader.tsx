@@ -28,6 +28,7 @@ export class AuthoringInnerHeader extends React.PureComponent<IProps, IState> {
 
         const classes = classNames('sd-editor-content__authoring-header', {
             'authoring-header--collapsed': this.state.collapsed,
+            'sd-editor-content__authoring-header--collapsible': !hideCollapseButton,
         });
         const {headerPadding} = this.props;
 

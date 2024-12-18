@@ -207,6 +207,14 @@
     }
 }
 
+/**
+    max-height is used for animation, but might cause issues when content height is greater
+    the class should only be applied if header has the capability to be collapsed
+*/
+.sd-editor-content__authoring-header--collapsible {
+    max-height: 1400px;
+}
+
 .sd-editor-content__authoring-header {
     grid-column: 1 / 3;
     grid-row: authoringHeader;
@@ -218,7 +226,6 @@
     padding: $sd-base-increment * 3 $sd-base-increment * 1.5;
     z-index: 2;
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.25);
-    max-height: 1400px;
     transition: max-height 0.12s ease-in;
 
     &>.authoring-header__holder {
