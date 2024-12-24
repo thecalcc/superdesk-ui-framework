@@ -100,7 +100,7 @@ $sd-ListItem-column-border: var(--sd-colour-line--x-light);
 
 .sd-list-item--no-hover {
     &:hover {
-        background-color: $sd-ListItem-background;
+        background-color: transparent;
         cursor: default;
     }
 }
@@ -390,7 +390,7 @@ $sd-ListItem-column-border: var(--sd-colour-line--x-light);
         text-transform: uppercase;
         flex-shrink: 0;
     }
-    
+
     .sd-list-item__headline {
         color: $sd-text;
         font-weight: 500;
@@ -682,7 +682,7 @@ $sd-ListItem-column-border: var(--sd-colour-line--x-light);
     .sd-list-header__number {
         margin-inline-start: 1rem;
     }
-    
+
     .sd-list-header__stretch-bar {
         flex-grow: 1;
         height: 1px;
