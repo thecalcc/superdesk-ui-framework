@@ -229,14 +229,57 @@ export class TestGround extends React.Component<IProps, IState> {
             <Components.Layout header="Testing Ground" theme={this.state.thisTheme}>
                 <Components.LayoutContainer>
                     <Components.MainPanel>
-                        <ButtonGroup align="end">
-                            <IconButton
-                                icon="adjust"
-                                ariaValue="Toggle theme"
-                                onClick={this.toggleTheme}
-                                toolTipFlow="left"
+                        <Container className="p-sticky top-0 z-2">
+                            <ButtonGroup align="end">
+                                <IconButton
+                                    icon="adjust"
+                                    ariaValue="Toggle theme"
+                                    onClick={this.toggleTheme}
+                                    toolTipFlow="left"
+                                />
+                            </ButtonGroup>
+                        </Container>
+
+                        <hr />
+
+                        <Container gap="large" className="sd-border--medium text-md p-2 radius-lg mb-3">
+                            <Avatar
+                                size="large"
+                                imageUrl="/avatar.jpg"
+                                initials="JL"
+                                displayName="Jeffrey Lebowski"
+                                nameDisplay={{kind: 'inline', placement: 'start'}}
+                                administratorIndicator={true}
+                                icon={{name: 'print', color: 'var(--sd-colour-state--done)'}}
+                                statusDot={{color: 'var(--sd-colour-coverage-state--on-merit)'}}
                             />
-                        </ButtonGroup>
+                            <Avatar
+                                size="x-small"
+                                imageUrl="/avatar.jpg"
+                                initials="JL"
+                                displayName="Jeffrey Lebowski"
+                                nameDisplay={{kind: 'inline', placement: 'end'}}
+                                icon={{name: 'print', color: 'var(--sd-colour-state--done)'}}
+                                statusDot={{color: 'var(--sd-colour-coverage-state--on-merit)'}}
+                            />
+                            <Avatar
+                                size="small"
+                                imageUrl="/avatar.jpg"
+                                initials="JL"
+                                displayName="Jeffrey Lebowski"
+                                nameDisplay={{kind: 'inline', placement: 'end'}}
+                                icon={{name: 'print', color: 'var(--sd-colour-state--done)'}}
+                                statusDot={{color: 'var(--sd-colour-coverage-state--on-merit)'}}
+                            />
+                            <Avatar
+                                size="small"
+                                imageUrl={null}
+                                initials="PH"
+                                displayName="Peter Hook"
+                                nameDisplay={{kind: 'inline', placement: 'end'}}
+                            />
+                            <Avatar size="large" imageUrl={null} initials="WS" displayName="Walter Sobchak" />
+                        </Container>
 
                         <hr />
 
